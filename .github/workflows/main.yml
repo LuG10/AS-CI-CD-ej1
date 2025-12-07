@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: List files
-        run: ls -R
+      - name: Bajar codigo
+        uses: actions/checkout@v5
       - name: instalar python
         run: pip install pytest
       - name: comprobar .py
