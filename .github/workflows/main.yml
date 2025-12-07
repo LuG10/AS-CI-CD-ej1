@@ -3,7 +3,7 @@ name: segundo workflow
 on: pull_request
 
 jobs: 
-  lint:
+  ej2:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
