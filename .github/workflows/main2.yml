@@ -1,0 +1,23 @@
+name: segundo workflow
+
+on: pull_request
+
+jobs: 
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ejecutar análisis con pylint
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
