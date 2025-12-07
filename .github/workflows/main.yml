@@ -1,9 +1,13 @@
 name: workflow
+
 on: push 
+
 jobs:
-  ejecutar test:
-  runs-on: ubuntu-latest
-    - name: instalar python
-      run: pip install pytest
-    - name: comprobar .py
-      run: pytest test.py
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: instalar python
+        run: pip install pytest
+      - name: comprobar .py
+        run: pytest test.py
